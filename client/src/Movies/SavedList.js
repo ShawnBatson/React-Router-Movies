@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "../index.css";
 
 const SavedList = props => (
   <div className="saved-list">
