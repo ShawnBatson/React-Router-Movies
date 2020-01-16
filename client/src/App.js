@@ -13,27 +13,27 @@ const App = () => {
     setSavedList([...savedList, movie]);
   };
 
-  //   return (
-  //     <div>
-  //       <SavedList list={savedList} />
-  //       <Route exact path="/" component={MovieList} />
-  //       <Route
-  //         path="/movies/:id"
-  //         // render={props => <Movie {...props} addToSavedList={addToSavedList} />}
-  //       />
-  //     </div>
-  //   );
-  // };
-
   return (
     <div>
       <SavedList list={savedList} />
-      <div>
-        <Route exact path="/" component={MovieList} />
-        <Route path="/Movies/:id" component={Movie} />
-      </div>
+      <Route exact path="/" component={MovieList} />
+      <Route
+        path="/movies/:id"
+        render={props => <Movie {...props} addToSavedList={addToSavedList} />}
+      />
     </div>
   );
 };
+
+//   return (
+//     <div>
+//       <SavedList list={savedList} />
+//       <div>
+//         <Route exact path="/" component={MovieList} />
+//         <Route path="/movies/:id" component={Movie} />
+//       </div>
+//     </div>
+//   );
+// };
 
 export default App;
